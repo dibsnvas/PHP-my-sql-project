@@ -1,0 +1,244 @@
+body {
+    background-image: url('/blog/back.jpeg');
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; /* Stack header and container vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Overflow hidden for screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        overflow: hidden; /* Prevent overflow issues on smaller screens */
+    }
+
+    header {
+        width: 90%; /* Adjust header width for smaller screens */
+        padding: 8px 16px; /* Adjust padding for better fit */
+    }
+    
+    .left-text {
+        font-size: 10px; /* Smaller font size for left text on small screens */
+    }
+
+    .center-text {
+        font-size: 10px; /* Smaller font size for center text on small screens */
+    }
+}
+
+header {
+    position: relative; /* Position header relative for adaptability */
+    width: 80%; /* Set the width of the header */
+    top: 10%;
+    max-width: 900px; /* Optional: Set a maximum width for larger screens */
+    padding: 10px 20px; /* Thinner padding for a thinner header */
+    background-color: #fff; /* White background for the header */
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle effect */
+    display: flex;
+    align-items: center; /* Align items vertically center */
+    justify-content: space-between; /* Space items between the edges */
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin-top: 10px; /* Adjust margin-top to give space from top */
+}
+
+.logo {
+    height: 50px; /* Adjust logo size as needed */
+    margin-right: 30px; /* Adjusted margin between logo and text */
+}
+
+.header-text {
+    display: flex;
+    align-items: center; /* Center text vertically with the logo */
+    flex: 1; /* Allow text to take up remaining space */
+    justify-content: space-between; /* Space between left and center text */
+}
+
+.left-text {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    font-size: 16px; /* Default font size for left text */
+}
+
+.center-text {
+    flex: 1; /* Allow this to take up remaining space */
+    display: flex;
+    justify-content: center; /* Center horizontally within this container */
+    font-size: 20px; /* Default font size for center text */
+    margin-right: 240px; /* Remove margin-right for centering */
+}
+
+.header-text p {
+    margin: 0; /* Remove default margins */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Slight white background with opacity */
+    padding: 20px;
+    border-radius: 12px; /* Oval borders for container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center; /* Center text inside container */
+    margin-top: 150px; /* Ensure there's space between header and container */
+}
+
+/* Overflow hidden for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        overflow: hidden; /* Hide overflow for small screens */
+    }
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+}
+
+.input-group input {
+    padding: 10px 10px 10px 30px;
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Oval borders for input fields */
+    font-size: 16px;
+    width: calc(100% - 20px);
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.input-group input::placeholder {
+    font-size: 18px; /* Bigger placeholder text */
+}
+
+/* Style for the red-colored register button */
+.btn {
+    background-color: #eb0909; /* Red background color */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Oval borders */
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #e60000; /* Darker red on hover */
+}
+
+/* Style for the underlined login link */
+.links button {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: #ff4d4d; /* Red text color */
+    font-size: 11px; /* Font size */
+    text-decoration: underline; /* Underlined text */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.links button:hover {
+    color: #e60000; /* Darker red on hover */
+    text-decoration: underline; /* Keep underline on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Stack elements vertically */
+        overflow: hidden; /* Ensure no overflow on mobile screens */
+        align-items: center; /* Center content horizontally */
+        overflow-y: hidden; /* Ensure no vertical overflow */
+        overflow-x: hidden; /* Ensure no horizontal overflow */
+    }
+
+    header {
+        width: 100%; /* Make the header take the full screen width */
+        padding: 8px 16px;
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align the text */
+        margin-bottom: 150px; /* Space below header */
+        overflow: hidden; /* Prevent any overflow in header */
+    }
+
+    .header-text {
+        justify-content: center; /* Center the text */
+        margin-top: 10px; /* Space between logo and text */
+        overflow: hidden; /* Prevent text overflow */
+        text-overflow: ellipsis; /* Handle text overflow with ellipsis */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .container {
+        width: 90%; /* Make container take most of the screen width */
+        padding: 20px; /* Add some padding */
+        margin: 0 0 20px 0; /* Space between header and container */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .left-text, .center-text {
+        font-size: 14px; /* Smaller font size for mobile screens */
+        overflow: hidden; /* Prevent text overflow */
+        text-overflow: ellipsis; /* Handle text overflow with ellipsis */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .btn {
+        width: 100%; /* Make the button take full width */
+        padding: 10px; /* Add padding for better touch interaction */
+        font-size: 16px; /* Adjust font size for readability */
+        overflow: hidden; /* Prevent overflow within button */
+    }
+
+    .input-group input {
+        width: 100%; /* Full width for input fields */
+        padding: 10px; /* Add padding */
+        font-size: 16px; /* Adjust font size for readability */
+        overflow: hidden; /* Ensure no overflow in input fields */
+    }
+
+    .input-group i {
+        left: 10px; /* Adjust icon positioning */
+        overflow: hidden; /* Ensure no overflow */
+    }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+        max-width: 95%; /* Make container take even more width */
+        overflow: hidden; /* Ensure no overflow in container */
+    }
+
+    .input-group input {
+        font-size: 14px; /* Smaller font size */
+        overflow: hidden; /* Prevent overflow in input */
+    }
+
+    .btn {
+        font-size: 14px; /* Smaller button text */
+        overflow: hidden; /* Prevent overflow in button */
+    }
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
